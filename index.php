@@ -14,8 +14,6 @@ if (count($_POST) > 0) {
         echo "Please solve captcha";
     }
 }
-
-$login_attempt = $_SESSION['login_attempt'];
 ?>
 <html>
 
@@ -68,7 +66,7 @@ $login_attempt = $_SESSION['login_attempt'];
                     <p class="captacha-error text-danger"></p>
                     <br>
                     <?php
-                    if ($_SESSION['login_attempt'] > 5) {
+                    if (isset($_SESSION['login_attempt']) && $_SESSION['login_attempt'] >= 3) {
                         echo "<p class='p-1 text-danger'> Dherai vayo ek chhin aaram garnus ani 30sec ma try garnus </p>";
                         $_SESSION['wait_time'] = time();
                     } else {
