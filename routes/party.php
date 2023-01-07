@@ -31,15 +31,20 @@
 
         
         <center> 
-                    <form action="../api/party.php" method="POST" enctype="multipart/form-data">
+                    <form action="../api/party.php" id="form3" method="POST" enctype="multipart/form-data">
                     <fieldset><h3>Party-Registration</h3>
                     <input type="text" name="name" placeholder="Party-Name" required>&nbsp
-                    <input type="number" name="mob" placeholder="Mobile" required><br><br>
-                    <input type="password" name="pass" placeholder="Password" required >&nbsp
+                    <input type="number" name="mob" id="mob" placeholder="Mobile" required>
+                    <p class="mob-error text-danger"></p>
+                    <input type="password" name="pass" id="pass" placeholder="Password" required >&nbsp
+                    <p class="pass-error text-danger"></p>
                     
                     <input type="password" name="cpass" placeholder="Confirm Password" required class="eye">
-                    <i class="far fa-eye" id="togglepasss" style="margin-left: -30px; cursor: pointer;"></i><br><br>
+                    
+                    <i class="far fa-eye" id="togglepasss" style="margin-left: -30px; cursor: pointer;"></i>
+                    <br><br>
                     <input style="width: 95%" type="text" name="est" placeholder="Established-Date" required><br><br>
+                    
                     
                 
                    <div id="upload" style="width: 95%">
@@ -52,7 +57,8 @@
                             <option value="2">Group</option>
                         </select><br>                   
                     </div><br>-->
-                    <div class="g-recaptcha" data-sitekey="6LflOtYjAAAAAA5h9Q4b0uxir84QAUkk45w1uQBA"></div><br>
+                    <div class="g-recaptcha" data-sitekey="6LflOtYjAAAAAA5h9Q4b0uxir84QAUkk45w1uQBA"></div>
+                    <p class="captacha-error text-danger"></p><br>
                     <button id="loginbtn" type="submit" name="registerbtn">Register</button><br><br>
                    <!-- Already user? <a href="../">Login here</a></fieldset>-->
                 </form>
@@ -69,6 +75,9 @@
 });
        </script>    
 
-           
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <!-- Login Js file -->
+    <script src="../assets/js/party.js"></script>
+    
     </body>
 </html>

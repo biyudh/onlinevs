@@ -53,5 +53,12 @@ $connect = mysqli_connect($servername, $username, $password, $database);
         
 
     }
+    
   
     ?>
+    <html>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<!-- Register Js file -->
+<script src="../assets/js/party.js"></script>
+
+</html>
