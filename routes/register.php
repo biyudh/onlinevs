@@ -34,24 +34,26 @@
 
         
         <center>
-                    <form action="../api/register.php" class="was-validated" method="POST" enctype="multipart/form-data" style="margin-top:30px;">
+                    <form action="../api/register.php" class="was-validated" id="form2" method="POST" enctype="multipart/form-data" style="margin-top:30px;">
                     <fieldset><h3>Registration</h3>
                     <input type="text" name="name" placeholder="Name" required>&nbsp
-                   <!-- <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>-->
-                    <input type="number" name="mob" placeholder="Mobile"  style="width:186px;"  required><br><br>
-                 <!--   <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div> -->
-                    <input type="password" name="pass" placeholder="Password" required >&nbsp
+                  
+                    <input type="number" name="mob" id="mob" placeholder="Mobile"  style="width:186px;"  required><br><br>
+                    <p class="mob-error text-danger"></p>
+                 
+                    <input type="password" name="pass" id="pass" placeholder="Password" required >&nbsp
+                    <p class="pass-error text-danger"></p>
                    
                     <input type="password" name="cpass" placeholder="Confirm Password" required id="eye">
                     <i class="far fa-eye" id="togglePass" style="margin-left: -30px; cursor: pointer;"></i><br><br>
 
-                    <input style="width: 95%" type="text" name="add" placeholder="Address" required><br><br>
-                    <input type="number" name="age" placeholder="Enter age" required><br><br>
+                    <input style="width: 95%" type="text"id="add" name="add" placeholder="Address" required><br><br>
+                    <p class="add-error text-danger"></p>
+                    <input type="number"id="age" name="age" placeholder="Enter age" required><br><br>
+                    <p class="age-error text-danger"></p>
                     <div id="upload" style="width:95% ;">
                     Select your gender:
-                        <select name="gender" >
+                        <select name="gender" id="gender" >
                             <option value="M">Male</option>
                             <option value="F">Female</option>
                             <option value="O">LGBTQIA+</option>
@@ -60,14 +62,10 @@
                     <div id="upload" style="width: 100%">
                         Upload image: <input type="file" id="profile" name="image" required>
                     </div><br>
-                   <!-- <div id="upload" style="width: 95%">
-                        Select your role:
-                        <select name="role">
-                            <option value="1">Voter</option>
-                            <option value="2">Group</option>
-                        </select><br>  -->                 
-                    </div><br>
+                          
+                    
                     <div class="g-recaptcha" data-sitekey="6LflOtYjAAAAAA5h9Q4b0uxir84QAUkk45w1uQBA"></div> <br>
+                    <p class="captacha-error text-danger"></p>
                     <button id="loginbtn" type="submit" name="registerbtn">Register</button><br><br>
                     Already user? <a href="../">Login here</a></fieldset>
                 </form>
@@ -92,5 +90,11 @@
     // toggle the eye slash icon
     this.classList.toggle('fa-eye-slash');
 });</script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <!-- Login Js file -->
+    <script src="./assets/js/register.js"></script>
+
     </body>
 </html>

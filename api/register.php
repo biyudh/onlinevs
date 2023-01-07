@@ -53,5 +53,9 @@ else {
                 </script>';
         }
     }
-}   
+} 
+
 ?>
+<html> <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <!-- Login Js file -->
+    <script src="../assets/js/register.js"></script></html>

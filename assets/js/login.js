@@ -46,7 +46,7 @@ function validateForm(mob,pass){
     // }
 
     if(grecaptcha.getResponse() == ""){
-        captachaErr.text('Kya tum robot ho ? Nahi toh captcha varo')
+        captachaErr.text('Please confirm that you are a human')
     }
 
 }

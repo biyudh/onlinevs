@@ -56,24 +56,20 @@ if (count($_POST) > 0) {
                     <p class="pass-error text-danger"></p>
                     <br>
 
-                    <!--<select name="role" style="width: 50%; border: 2px solid black">
-                        <option value="1">Voter</option>
-                        <option value="2">Group</option>
-                    </select>
-                    <input type="text" name="role" placeholder="voter">-->
-                    <div class="g-recaptcha" data-sitekey="6LflOtYjAAAAAA5h9Q4b0uxir84QAUkk45w1uQBA" important></div>
+                   
+                    <div class="g-recaptcha" data-sitekey="6LflOtYjAAAAAA5h9Q4b0uxir84QAUkk45w1uQBA"></div>
                     <br>
                     <p class="captacha-error text-danger"></p>
-                    <br>
+                    
                     <?php
                     if (isset($_SESSION['login_attempt']) && $_SESSION['login_attempt'] >= 3) {
-                        echo "<p class='p-1 text-danger'> Dherai vayo ek chhin aaram garnus ani 30sec ma try garnus </p>";
+                        echo "<p class='p-1 text-danger'> Please wait for 30 sec to login again!!! </p>";
                         $_SESSION['wait_time'] = time();
                     } else {
 
                     ?>
                         <button id="loginbtn" type="submit" name="loginbtn">Login</button>
-                        <br>
+                        
                         <br>
                     <?php } ?>
                     <p class="text-danger">
