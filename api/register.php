@@ -1,43 +1,36 @@
 <?php
-    include("connection.php");
+include("connection.php");
 
-    $name = $_POST['name'];
-    $mobile = $_POST['mob'];
-    $pass = $_POST['pass'];
-    $cpass = $_POST['cpass'];
-    $add = $_POST['add'];
-    $age = $_POST['age'];
-    $gender = $_POST['gender'];
-    $image = $_FILES['image']['name'];
-    $tmp_name = $_FILES['image']['tmp_name'];
-  //  $role = $_POST['role'];
+$name = $_POST['name'];
+$mobile = $_POST['mob'];
+$pass = $_POST['pass'];
+$cpass = $_POST['cpass'];
+$add = $_POST['add'];
+$age = $_POST['age'];
+$gender = $_POST['gender'];
+$image = $_FILES['image']['name'];
+$tmp_name = $_FILES['image']['tmp_name'];
+//  $role = $_POST['role'];
 $duplicate = mysqli_query($connect, "SELECT * FROM user WHERE mobile = $mobile");
-if(mysqli_num_rows($duplicate)>0)
-{
+if (mysqli_num_rows($duplicate) > 0) {
     echo "<script>
     alert('Mobile number has already taken');
     window.location = '../routes/register.php';
     </script>";
-} 
-if($age < 18|| $age >110)
-{
+}
+if ($age < 18 || $age > 110) {
     echo "<script>
     alert('You are not eligible for voting');
     window.location = '../';
     </script>";
-
 }
 
-if(strlen($mobile) != 10)
-{
+if (strlen($mobile) != 10) {
     echo "<script>
     alert('The mobile number must be length of 10');
     window.location = '../';
     </script>";
-
-}
-
-else {
+} else {
     if ($cpass != $pass) {
         echo '<script>
                 alert("Passwords do not match!");
@@ -53,9 +46,12 @@ else {
                 </script>';
         }
     }
-} 
+}
 
 ?>
-<html> <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <!-- Login Js file -->
-    <script src="../assets/js/register.js"></script></html>
+<html>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<!-- Register Js file -->
+<script src="../assets/js/register.js"></script>
+
+</html>

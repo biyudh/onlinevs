@@ -1,3 +1,4 @@
+
 $('#form2').submit(function(e) {
     const mob = $('#mob').val()
     const pass = $('#pass').val()
@@ -9,7 +10,6 @@ $('#form2').submit(function(e) {
 
     }
 })
-
 
 
 
