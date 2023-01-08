@@ -14,13 +14,15 @@
         <div id="loginSection">
 
             <fieldset>
-                <form action="../api/adminlogin.php" method="POST">
+                <form action="../api/adminlogin.php"id="form4"method="POST">
                     <h3>Admin-Login</h3>
                     <input type="text" name="admin" placeholder="Admin-Name" required><br><br>
-                    <input type="password" name="pass" placeholder="Enter password" required id="id_password">
-                    <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i><br><br>
-                    <div class="g-recaptcha" data-sitekey="6LflOtYjAAAAAA5h9Q4b0uxir84QAUkk45w1uQBA"></div> <br>
-                    <button id="loginbtn" type="submit" name="loginbtn">Login</button><br><br>
+                    <input type="password" name="pass" id="pass" placeholder="Enter password" required id="id_password">
+                    <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+                    <p class="pass-error text-danger"></p><br>
+                    <div class="g-recaptcha" data-sitekey="6LflOtYjAAAAAA5h9Q4b0uxir84QAUkk45w1uQBA"></div>
+                    <p class="captacha-error text-danger"></p> 
+                    <button id="loginbtn" type="submit" name="loginbtn">Login</button>
                 </form>
             </fieldset>
         </div>
@@ -39,7 +41,9 @@
             this.classList.toggle('fa-eye-slash');
         });
     </script>
-
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <!-- admin Js file -->
+    <script src="../assets/js/admin.js"></script>
 
 
 </body>

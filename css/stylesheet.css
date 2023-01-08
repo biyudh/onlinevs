@@ -1,6 +1,6 @@
 input {
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 
@@ -29,7 +29,7 @@ select {
 #loginbtn {
   padding: 5px;
   font-size: 15px;
-  background-color: #3498db;
+  background-color: #21272c;
   color: white;
   border-radius: 5px;
 }

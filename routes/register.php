@@ -7,6 +7,7 @@
     <title>Online voting system - Registratrion</title>
     <marquee direction="right" style="background-color:  #3498db;">Please Vote The Right Candidate....Please Vote The Right Candidate....Please Vote The Right Candidate....Please Vote The Right Candidate....Please Vote The Right Candidate....</marquee>
     <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <style>
         fieldset {
@@ -31,13 +32,13 @@
 
 <body style="background-color: white;">
 
-
-    <center>
+<center>
+    <div class="login-box">
         <form action="../api/register.php" class="was-validated" id="form2" method="POST" enctype="multipart/form-data" style="margin-top:30px;">
-            <fieldset>
+            
                 <h3>Registration</h3>
-                <input type="text" name="name" placeholder="Name" required>&nbsp
-
+                <input type="text" name="name" placeholder="Name" required>&nbsp 
+ 
                 <input type="number" name="mob" id="mob" placeholder="Mobile" style="width:186px;" required><br><br>
                 <p class="mob-error text-danger"></p>
 
@@ -68,8 +69,9 @@
                 <p class="captacha-error text-danger"></p>
                 <button id="loginbtn" type="submit" name="registerbtn">Register</button><br><br>
                 Already user? <a href="../">Login here</a>
-            </fieldset>
+            
         </form>
+    </div>
     </center>
     <script>
         const togglePassword = document.querySelector('#togglePass');

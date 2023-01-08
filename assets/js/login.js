@@ -31,9 +31,11 @@ function validateForm(mob,pass){
         mobErr.text('Please enter your mobile number')
     }
     
-    if(!pass || pass==''){
-        passErr.text('Please enter your password')
+    
+    if(pass.length<6){
+        passErr.text('Password must be atleast length 6!')
     }
+    
 
     if(mob.length != 10){
         mobErr.text('Mobile number must be 10 digits')
