@@ -9,66 +9,63 @@
     <link rel="stylesheet" href="../css/stylesheet.css">
     <link rel="stylesheet" href="../css/style.css">
 
-    <style>
-        fieldset {
-            line-height: 13px;
-            background-color: whitesmoke;
-            width: 40%;
-            height: 100%;
-            padding: 40%, 40%;
-            border-radius: 5px;
-        }
-
-        /* body { 
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-position: center;
-            /*filter: blur(px);-webkit-filter: blur(8px);
-            background-attachment: fixed;
-            background-image: url("vote2.jpg");*/
-    </style>
+   
 </head>
+
 <script src='https://www.google.com/recaptcha/api.js'></script>
+<div  style="display: flex; justify-content: space-between;flex-direction:row-reverse;">
+<div>Already user?<a href="../" class="style">Login here</a></div>
+</div>
 
 <body style="background-color: white;">
 
 <center>
-    <div class="login-box">
+    <div class="login-box1">
         <form action="../api/register.php" class="was-validated" id="form2" method="POST" enctype="multipart/form-data" style="margin-top:30px;">
-            
+                <br>
                 <h3>Registration</h3>
-                <input type="text" name="name" placeholder="Name" required>&nbsp 
- 
-                <input type="number" name="mob" id="mob" placeholder="Mobile" style="width:186px;" required><br><br>
-                <p class="mob-error text-danger"></p>
-
-                <input type="password" name="pass" id="pass" placeholder="Password" required>&nbsp
-                <p class="pass-error text-danger"></p>
-
+                <br>
+            
+                <div  class="register">
+                <input type="text" name="name" placeholder="Full Name" required>
+                
+               &nbsp;
+                
+                
+                
+                <input type="number" name="mob" id="mob" placeholder="Mobile"  required>
+                <span class="mob-error text-danger"></span></div><br>
+                
+                <div  class="register">
+                <input type="password" name="pass" id="pass" placeholder="Password" required>
+                <span class="pass-error text-danger"></span>&nbsp;
+                
                 <input type="password" name="cpass" placeholder="Confirm Password" required id="eye">
-                <i class="far fa-eye" id="togglePass" style="margin-left: -30px; cursor: pointer;"></i><br><br>
-
-                <input style="width: 95%" type="text" id="add" name="add" placeholder="Address" required><br><br>
-                <p class="add-error text-danger"></p>
-                <input type="number" id="age" name="age" placeholder="Enter age" required><br><br>
-                <p class="age-error text-danger"></p>
-                <div id="upload" style="width:95% ;">
+                <i class="far fa-eye" id="togglePass" style="margin-left: -30px; cursor: pointer;"></i></div><br>
+                
+                <div  class="register">
+                <input  type="text" id="add" name="add" placeholder="Address" required>
+                <span class="add-error text-danger"></span>&nbsp;
+                
+                <input type="number" id="age" name="age" placeholder="Enter age" required>
+                <span class="age-error text-danger"></span></div><br> 
+                <div style="width:50% ;">
                     Select your gender:
-                    <select name="gender" id="gender">
+                    <select  style="width=5%;" name="gender" id="gender">
                         <option value="M">Male</option>
                         <option value="F">Female</option>
                         <option value="O">LGBTQIA+</option>
                     </select>
                 </div><BR>
-                <div id="upload" style="width: 100%">
-                    Upload image: <input type="file" id="profile" name="image" required>
+                <div  style="width: 100%">
+                    Upload image:<br> <input type="file" id="upload" name="image" required>
                 </div><br>
 
 
                 <div class="g-recaptcha" data-sitekey="6LflOtYjAAAAAA5h9Q4b0uxir84QAUkk45w1uQBA"></div> <br>
                 <p class="captacha-error text-danger"></p>
                 <button id="loginbtn" type="submit" name="registerbtn">Register</button><br><br>
-                Already user? <a href="../">Login here</a>
+               
             
         </form>
     </div>

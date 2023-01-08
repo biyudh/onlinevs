@@ -7,6 +7,7 @@
         <marquee behavior="slide" direction="right" style="background-color:  #3498db;">Please Vote The Right Candidate....Please Vote The Right Candidate....Please Vote The Right Candidate....Please Vote The Right Candidate....Please Vote The Right Candidate....</marquee>
         <a href="../"><button id="back-button"> Back</button></a>
         <link rel="stylesheet" href="../css/stylesheet.css">
+        <link rel="stylesheet" href="../css/style.css">
         <style>
        
          fieldset{

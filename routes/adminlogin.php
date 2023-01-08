@@ -6,6 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <script src='https://www.google.com/recaptcha/api.js'></script>
+<link rel="stylesheet" href="../css/style.css">
 
 <body>
     <a href="../" class="btn btn-dark" name="back">Back</a>

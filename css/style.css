@@ -16,6 +16,7 @@ html {
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
+   
   }
   
   
@@ -83,18 +84,56 @@ html {
     border:1px solid  #03e9f4 ;
 }
 input {
+    padding: 5px;
+    border-radius: 120px;
+    border-color: #03e9f4;
+    font-size: smaller;
+
+  }
+
+
+#gender, #upload{
     padding: 10px;
     border-radius: 120px;
     border-color: #03e9f4;
 
+}
+.input {
+    padding: 12px;
+    border-radius: 120px;
+    border-color: #03e9f4;
+    font-size: smaller;
+
   }
-#mob, #pass{
-    transition:all .5s;
-    border:1px solid  #03e9f4 ;
-}
-.input:not(:placeholder-shown) + .label{
-    transform: translate(0, -12px) scale(0.8);
-}
-.input:focus-within #mob, .input:focus-within #pass{
-    outline-color: #03e9f4;
-}
+  .login-box1 {
+    padding: fit-content;
+    width: 60%;
+    
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+   
+  }
+  
+  
+  
+  
+  
+  .login-box1 .user-box input:focus ~ label,
+  .login-box1 .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+  }
+  .style{
+    background-color: #55c1c6;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    font-size: small;
+    line-height: 10px;
+    border-radius: 4px;
+    color: white;
+
+  }
