@@ -29,7 +29,7 @@ function validateForm(mob,pass,add,age){
     }
 
     if(pass.length<6){
-        passErr.text('Password must be of length 6!')
+        passErr.text('Password must be atleast length 6!')
     }
 
     if(mob.length != 10){
@@ -37,6 +37,9 @@ function validateForm(mob,pass,add,age){
     }
     if(!add || add==''){
         addErr.text('Please enter your address')
+    }
+    if(age<18||age>105){
+        ageErr.text('You are not eligible for voting!')
     }
 
 

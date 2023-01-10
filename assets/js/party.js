@@ -2,18 +2,19 @@
 $('#form3').submit(function(e) {
     const mob = $('#mob').val()
     const pass = $('#pass').val()
+    const cpass = $('#cpass').val()
     const add = $('#add').val()
     const age = $('#age').val()
-    if (grecaptcha.getResponse() == "" || !mob || !pass || mob=='' || pass==''|| mob.length!=10 || !add || !age || add==''||age=='') {
+    if (grecaptcha.getResponse() == "" || !mob || !pass || mob=='' || pass==''||cpass!=pass|| mob.length!=10 || !add || !age || add==''||age=='') {
         e.preventDefault()
-        validateForm(mob,pass,add,age)
+        validateForm(mob,pass,cpass,add,age)
 
     }
 })
 
 
 
-function validateForm(mob,pass,add,age){
+function validateForm(mob,pass,cpass,add,age){
     const mobErr = $('.mob-error')
     const passErr = $('.pass-error')
     const addErr = $('.add-error')
@@ -26,6 +27,9 @@ function validateForm(mob,pass,add,age){
     
     if(!pass || pass==''){
         passErr.text('Please enter your password')
+    }
+    if(cpass != pass){
+        passErr.text('password do not match !')
     }
 
     if(pass.length<6){

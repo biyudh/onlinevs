@@ -5,7 +5,7 @@
     $votes = $_POST['gvotes'];
 
     $total_votes= $votes+1;
-    $pid = $_POST['pid'];
+    $pid = $_POST['gid'];
     $uid = $_SESSION['id'];
 
     //$update_votes = mysqli_query($connect, "update user set votes='$total_votes' where id='$pid'");

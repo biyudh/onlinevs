@@ -5,64 +5,64 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
         <title>Online voting system -Party Registratrion</title>
         <marquee behavior="slide" direction="right" style="background-color:  #3498db;">Please Vote The Right Candidate....Please Vote The Right Candidate....Please Vote The Right Candidate....Please Vote The Right Candidate....Please Vote The Right Candidate....</marquee>
-        <a href="../"><button id="back-button"> Back</button></a>
-        <link rel="stylesheet" href="../css/stylesheet.css">
-        <link rel="stylesheet" href="../css/style.css">
-        <style>
        
-         fieldset{
-            background-color: whitesmoke;
-            width: fit-content;
-            padding: 40%, 40%; 
-            border-radius: 5px;
-         }
-        /* body { 
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-position: center;
-            /*filter: blur(px);-webkit-filter: blur(8px);
-            background-attachment: fixed;
-            background-image: url("vote2.jpg");*/
-
-        
-        </style>
+      <!--  <link rel="stylesheet" href="../css/stylesheet.css"> -->
+        <link rel="stylesheet" href="../css/style.css">
+       
+       
     </head>
+   
+    <a href="../"><button id="back"> Back</button></a>
     <script src='https://www.google.com/recaptcha/api.js'></script><br><br><br>
-    <body  style="background-color: white;">
+    <body>
 
         
         <center> 
+            <div  class="login-box1">
                     <form action="../api/party.php" id="form3" method="POST" enctype="multipart/form-data">
-                    <fieldset><h3>Party-Registration</h3>
-                    <input type="text" name="name" placeholder="Party-Name" required>&nbsp
-                    <input type="number" name="mob" id="mob" placeholder="Mobile" required>
-                    <p class="mob-error text-danger"></p>
-                    <input type="password" name="pass" id="pass" placeholder="Password" required >&nbsp
-                    <p class="pass-error text-danger"></p>
+                    <h3>Party-Registration</h3>
                     
+                            <div>  
+                            <label> <input type="text" name="name" placeholder="Party-Name" required><br>
+                            
+                            </label>&nbsp;
+                            <label>
+                            <input type="number" name="mob" id="mob" placeholder="Mobile" required>
+                            <p class="mob-error text-danger"></p></label>
+                        </div>
+                    
+                    <div>
+                    
+                    <label>  
+                    <input type="password" name="pass" id="pass" placeholder="Password" required >
+                    <p class="pass-error text-danger"></p></label>&nbsp;
+                    <label>
                     <input type="password" name="cpass" placeholder="Confirm Password" required class="eye">
                     
-                    <i class="far fa-eye" id="togglepasss" style="margin-left: -30px; cursor: pointer;"></i>
-                    <br><br>
-                    <input style="width: 95%" type="text" name="est" placeholder="Established-Date" required><br><br>
+                    <i class="far fa-eye" id="togglepasss" style="margin-left: -30px; cursor: pointer;"></i></label>
+                    </div>
+                   <div>
+                    <label>
+                    <input type="text" name="est" placeholder="Established-Date" required><br><br>
+                    
+                    </label>
+                    </div>
                     
                     
                 
-                   <div id="upload" style="width: 95%">
-                        Upload image: <input type="file" id="profile" name="image" required>
-                    </div><br>
-                   <!-- <div id="upload" style="width: 95%">
-                        Select your role:
-                        <select name="role">
-                            <option value="1">Voter</option>
-                            <option value="2">Group</option>
-                        </select><br>                   
-                    </div><br>-->
+                   
+                   <div  style="width: 100%">
+                    Upload image:<br> <input type="file" id="upload1" name="image" required>
+                   </div>
+                   <br>
+                       
+                   
                     <div class="g-recaptcha" data-sitekey="6LflOtYjAAAAAA5h9Q4b0uxir84QAUkk45w1uQBA"></div>
                     <p class="captacha-error text-danger"></p><br>
-                    <button id="loginbtn" type="submit" name="registerbtn">Register</button><br><br>
-                   <!-- Already user? <a href="../">Login here</a></fieldset>-->
+                    <button id="loginbtn1" type="submit" name="registerbtn">Register</button><br><br>
+                   
                 </form>
+                </div>
             </center>
             <script>const togglePassword = document.querySelector('#togglepasss');
              const password = document.querySelector('.eye');

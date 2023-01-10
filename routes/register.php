@@ -8,6 +8,7 @@
     <marquee direction="right" style="background-color:  #3498db;">Please Vote The Right Candidate....Please Vote The Right Candidate....Please Vote The Right Candidate....Please Vote The Right Candidate....Please Vote The Right Candidate....</marquee>
     <link rel="stylesheet" href="../css/stylesheet.css">
     <link rel="stylesheet" href="../css/style.css">
+   
 
    
 </head>
@@ -57,8 +58,8 @@
                         <option value="O">LGBTQIA+</option>
                     </select>
                 </div><BR>
-                <div  style="width: 100%">
-                    Upload image:<br> <input type="file" id="upload" name="image" required>
+                <div  style="width: 100%" >
+                    Upload image:<br> <input type="file"id="upload"  name="image" required>
                 </div><br>
 
 

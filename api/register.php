@@ -17,6 +17,7 @@ if (mysqli_num_rows($duplicate) > 0) {
     alert('Mobile number has already taken');
     window.location = '../routes/register.php';
     </script>";
+    return;
 }
 if ($age < 18 || $age > 110) {
     echo "<script>
