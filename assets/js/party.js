@@ -5,12 +5,12 @@ $('#form3').submit(function(e) {
     const cpass = $('#cpass').val()
     if (grecaptcha.getResponse() == "" || !mob || !pass || mob=='' || pass==''||cpass!=pass|| mob.length!=10 ) {
         e.preventDefault()
-        validateForm(mob,pass,cpass,add,age)
+        validateForm(mob,pass,cpass)
 
     }
 })
 
-function validateForm(mob,pass,cpass,add){
+function validateForm(mob,pass,cpass){
     const mobErr = $('.mob-error')
     const passErr = $('.pass-error')
     const captachaErr = $('.captacha-error')

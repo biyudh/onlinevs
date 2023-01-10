@@ -1,14 +1,5 @@
 <?php
 include("connection.php");
-/*$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "online-voting-system";
-$connect = mysqli_connect($servername, $username, $password, $database);
-/*if(!$connect){
-    die("Sorry failed to connect:" . mysqli_connect_error());
-} else {
-    echo "connection successful";}*/
 
 $name = $_POST['name'];
 $mobile = $_POST['mob'];
