@@ -34,21 +34,21 @@
                 
                 
                 
-                <input type="number" name="mob" id="mob" placeholder="Mobile"  required>
+                <input type="number" name="mob" id="mob" placeholder="Mobile" class="form-control" required>
                 <span class="mob-error text-danger"></span></div><br>
                 
                 <div  class="register">
-                <input type="password" name="pass" id="pass" placeholder="Password" required>
+                <input type="password" name="pass"class="form-control id="pass" placeholder="Password" required>
                 <span class="pass-error text-danger"></span>&nbsp;
                 
-                <input type="password" name="cpass" placeholder="Confirm Password" required id="eye">
+                <input type="password" name="cpass"class="form-control placeholder="Confirm Password" required id="eye">
                 <i class="far fa-eye" id="togglePass" style="margin-left: -30px; cursor: pointer;"></i></div><br>
                 
                 <div  class="register">
-                <input  type="text" id="add" name="add" placeholder="Address" required>
+                <input  type="text" id="add" name="add"class="form-control placeholder="Address" required>
                 <span class="add-error text-danger"></span>&nbsp;
                 
-                <input type="number" id="age" name="age" placeholder="Enter age" required>
+                <input type="number" id="age" name="age"class="form-control placeholder="Enter age" required>
                 <span class="age-error text-danger"></span></div><br> 
                 <div style="width:50% ;">
                     Select your gender:
