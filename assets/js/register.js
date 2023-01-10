@@ -1,3 +1,22 @@
+const togglePassword = $('#togglePassword');
+const ctogglePassword = $('#ctogglePassword')
+const cpassword = $('#cpass');
+const password = $('#pass');
+
+
+togglePassword.on('click',function(e){
+    const type = password.attr('type') === 'password' ? 'text' : 'password';
+    password.attr('type',type)
+    togglePassword.toggleClass('fa-eye-slash')
+})
+
+
+ctogglePassword.on('click',function(e){
+    const type = cpassword.attr('type') === 'password' ? 'text' : 'password';
+    cpassword.attr('type',type)
+    ctogglePassword.toggleClass('fa-eye-slash')
+})
+
 
 $('#form2').submit(function(e) {
     const mob = $('#mob').val()

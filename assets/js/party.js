@@ -3,22 +3,16 @@ $('#form3').submit(function(e) {
     const mob = $('#mob').val()
     const pass = $('#pass').val()
     const cpass = $('#cpass').val()
-    const add = $('#add').val()
-    const age = $('#age').val()
-    if (grecaptcha.getResponse() == "" || !mob || !pass || mob=='' || pass==''||cpass!=pass|| mob.length!=10 || !add || !age || add==''||age=='') {
+    if (grecaptcha.getResponse() == "" || !mob || !pass || mob=='' || pass==''||cpass!=pass|| mob.length!=10 ) {
         e.preventDefault()
         validateForm(mob,pass,cpass,add,age)
 
     }
 })
 
-
-
-function validateForm(mob,pass,cpass,add,age){
+function validateForm(mob,pass,cpass,add){
     const mobErr = $('.mob-error')
     const passErr = $('.pass-error')
-    const addErr = $('.add-error')
-    const ageErr = $('.age-error')
     const captachaErr = $('.captacha-error')
 
     if(!mob || mob==''){
@@ -28,6 +22,9 @@ function validateForm(mob,pass,cpass,add,age){
     if(!pass || pass==''){
         passErr.text('Please enter your password')
     }
+
+    console.log(pass,cpass)
+
     if(cpass != pass){
         passErr.text('password do not match !')
     }
@@ -39,10 +36,6 @@ function validateForm(mob,pass,cpass,add,age){
     if(mob.length != 10){
         mobErr.text('Mobile number must be 10 digits')
     }
-    if(!add || add==''){
-        addErr.text('Please enter your address')
-    }
-
 
     // Yeslai pachi implement garna sakiyo password ko length chahiye
     // if(pass.length<6){
